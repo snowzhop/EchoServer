@@ -52,7 +52,6 @@ void udpServer(const char* port, std::atomic_bool& control) {
         u_int len = sizeof(sockaddr);
         u_int bufferSize;
         int ret = receiveAllFrom(mainSocketFd, buffer, bufferSize, 0, &client, &len);
-//        int ret = receiveAll(mainSocketFd, buffer, bufferSize);
         if (ret == 0) {
             for (int i = 0; i < bufferSize; ++i) {
                 buffer[i] = toupper(buffer[i]);

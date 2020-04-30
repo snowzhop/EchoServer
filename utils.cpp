@@ -118,8 +118,6 @@ int sendAllTo(int socket, const char* buf, u_int len, u_int flags, sockaddr* to,
 //-------------------
 /* Socktype == UDP */
 //-------------------
-/* Returns count of received bytes */
-//-------------------
 int receiveAllFrom(int socket, char* buf, u_int &len, u_int flags, sockaddr* from, u_int* fromLength) {
     u_int* bytesLeft = nullptr;
     int total = 0;
